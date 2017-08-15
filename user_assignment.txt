@@ -1,0 +1,26 @@
+User.objects.filter(id="2").values("first_name")
+
+User.objects.order_by("-last_name").values("last_name")
+
+for b in User.objects.raw("SELECT *  FROM user_login_user"):
+    ...:     print(b.first_name, b.last_name)
+
+User.objects.last().id
+
+User.objects.filter(first_name__startswith = 'G').count()
+
+
+In [10]: b = User()
+
+In [11]: b.name = "Harshada"
+
+In [12]: b.save()
+
+
+User.objects.all().values()
+
+User.objects.create(first_name="Gasdfdfrant",last_name="Brooks")
+
+
+b = User.objects.get(id =2)
+b.delete()
